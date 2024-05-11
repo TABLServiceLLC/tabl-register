@@ -4,8 +4,13 @@ document.getElementById('registrationForm').addEventListener('submit', function 
     const formData = new FormData(this);
 
     fetch('https://backend.tabl.page/emails/register/', {
-        method: 'POST',
         body: formData,
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+            'X-Secret': 'Spark Apps, LLC Resurrection',
+            'Content-Type': 'multipart/form-data',
+        },
     })
         .then((response) => response.json())
         .then((data) => {
