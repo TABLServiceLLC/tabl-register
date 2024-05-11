@@ -12,5 +12,8 @@ document.getElementById('registrationForm').addEventListener('submit', function 
             this.reset();
             alert('Registration successful! Please allow up to 48 hours for account creation.');
         })
-        .catch((error) => console.error('Error:', error));
+        .catch((error) => {
+            console.error('Error:', error);
+            alert(`Error! ${error.message}`);
+        });
 });
