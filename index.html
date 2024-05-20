@@ -28,6 +28,9 @@
                 <label for="taxRate">Tax Rate (%):</label>
                 <input type="number" id="taxRate" name="taxRate" min="0" max="20" step="0.001" required />
 
+                <label for="currentMenu">Do you have a link to your current menu?</label>
+                <input type="url" name="currentMenu" id="currentMenu" />
+
                 <label for="reportDay">Preferred Day for Weekly Financial Reports:</label>
                 <select id="reportDay" name="reportDay" required>
                     <option value="Sunday">Sunday</option>
@@ -39,8 +42,39 @@
                     <option value="Saturday">Saturday</option>
                 </select>
 
-                <label for="salesperson">If you spoke to a sales rep, what's their code?:</label>
-                <input type="text" id="salesperson" name="salesperson" />
+                <label for="howYouHeard">How did you hear about us?</label>
+                <select id="howYouHeard" name="howYouHeard">
+                    <option value="">----- Select One -----</option>
+                    <option value="email">Email</option>
+                    <option value="newsletter">Newsletter</option>
+                    <option value="word_of_mouth">Word of mouth</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="salesperson">TABL Team Member</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <div class="hidden" id="salesTeamMember">
+                    <label for="salesperson">Who were you working with?</label>
+                    <select name="salesperson" id="salesperson">
+                        <option value="">----- Select One -----</option>
+                        <option value="alvin">Alvin Jhou</option>
+                        <option value="brent">Brent Williams II</option>
+                        <option value="bryan">Bryan Gomes</option>
+                        <option value="paris">J. Paris-Santos</option>
+                        <option value="jeff">Jeff Rodman</option>
+                        <option value="jude">Jude Murphy</option>
+                        <option value="kris">Kris Paparello</option>
+                        <option value="shayne">Shayne Stark</option>
+                        <option value="syed">Syed Uzairuddin</option>
+                    </select>
+                </div>
+
+                <span class="hidden" id="otherMethod">
+                    <label for="otherMethos">Please explain:</label>
+                    <input type="text" id="otherMethos" name="otherMethos" />
+                </span>
 
                 <button type="submit">Submit</button>
             </form>

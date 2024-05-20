@@ -1,4 +1,16 @@
-document.getElementById('registrationForm').addEventListener('submit', function (event) {
+const form = document.getElementById('registrationForm');
+const howYouHeard = document.getElementById('howYouHeard');
+const otherMethod = document.getElementById('otherMethod');
+const salesTeamMember = document.getElementById('salesTeamMember');
+
+howYouHeard.addEventListener('change', function (event) {
+    otherMethod.classList.remove('show');
+    salesTeamMember.classList.remove('show');
+    if (this.value === 'other') otherMethod.classList.add('show');
+    if (this.value === 'salesperson') salesTeamMember.classList.add('show');
+});
+
+form.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const formData = new FormData(this);

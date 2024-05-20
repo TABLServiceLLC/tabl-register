@@ -44,7 +44,7 @@ select:focus {
 
 button {
     border: none;
-    padding: 12px;
+    padding: 16px;
     color: white;
     cursor: pointer;
     border-radius: 5px;
@@ -53,4 +53,13 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.hidden {
+    flex-direction: column;
+    display: none;
+}
+
+.hidden.show {
+    display: flex;
 }
